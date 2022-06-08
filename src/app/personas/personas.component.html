@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Listado de personas</h1>
+      <button
+        class="btn btn-primary"
+        (click)="agregar()"
+        [disabled]="deshabilitar"
+      >
+        Agregar Persona
+      </button>
+      <p>{{ persona }}</p>
+      <app-persona></app-persona>
+
+      <label for="">Titulo Persona</label>
+      <!-- <input
+        type="text"
+        class="form-control"
+        (input)="modificarTitulo($event)"
+      /> -->
+      <input type="text" class="form-control" [(ngModel)]="titulo" />
+      {{ titulo }}
+    </div>
+  </div>
+</div>
